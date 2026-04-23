@@ -1,0 +1,234 @@
+body {
+  background: #f4f7ff;
+  font-family: Arial, sans-serif;
+}
+
+/* PAGE CENTER */
+.admission-container {
+  width: 420px;
+  margin: 50px auto;
+  padding: 25px;
+  border-radius: 16px;
+
+  /* GLASS EFFECT */
+  background: rgba(255, 255, 255, 0.85);
+  backdrop-filter: blur(10px);
+
+  box-shadow: 0 10px 30px rgba(0,0,0,0.15);
+
+  animation: slideUp 0.6s ease;
+}
+
+/* TITLE */
+.admission-container h2 {
+  text-align: center;
+  margin-bottom: 15px;
+  color: #2b2d42;
+  letter-spacing: 1px;
+}
+
+/* INPUT FIELDS */
+.admission-container input,
+.admission-container select,
+.admission-container textarea {
+  width: 100%;
+  padding: 10px 12px;
+  margin: 8px 0;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  outline: none;
+  transition: 0.3s;
+  font-size: 14px;
+}
+
+/* FOCUS EFFECT */
+.admission-container input:focus,
+.admission-container select:focus,
+.admission-container textarea:focus {
+  border-color: #6c63ff;
+  box-shadow: 0 0 8px rgba(108, 99, 255, 0.3);
+}
+
+/* TEXTAREA */
+.admission-container textarea {
+  height: 70px;
+  resize: none;
+}
+
+/* BUTTON */
+.admission-container button {
+  width: 100%;
+  padding: 12px;
+  margin-top: 12px;
+
+  border: none;
+  border-radius: 10px;
+
+  background: linear-gradient(135deg, #6c63ff, #4a47a3);
+  color: white;
+
+  font-size: 15px;
+  font-weight: bold;
+
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+/* BUTTON HOVER */
+.admission-container button:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 20px rgba(108, 99, 255, 0.4);
+}
+
+/* ANIMATION */
+@keyframes slideUp {
+  from {
+    transform: translateY(40px);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+/* SUCCESS BOX */
+.successBox {
+  text-align: center;
+  margin-top: 80px;
+  animation: fadeIn 0.5s ease;
+}
+
+.successBox h2 {
+  color: green;
+}
+
+.successBox button {
+  padding: 10px 18px;
+  margin-top: 10px;
+  background: #6c63ff;
+  border: none;
+  color: white;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.successBox button:hover {
+  transform: scale(1.05);
+}
+
+/* FADE ANIMATION */
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+body {
+  background: linear-gradient(135deg, #eef2ff, #f8f9ff);
+  font-family: Arial;
+}
+
+/* FORM BOX */
+.admission-container {
+  width: 420px;
+  margin: 40px auto;
+  padding: 20px;
+
+  background: rgba(255,255,255,0.9);
+  backdrop-filter: blur(10px);
+
+  border-radius: 16px;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.15);
+
+  animation: fadeUp 0.5s ease;
+}
+
+/* TITLE */
+.admission-container h2 {
+  text-align: center;
+  color: #333;
+}
+
+/* INPUT */
+.admission-container input,
+.admission-container select,
+.admission-container textarea {
+  width: 100%;
+  padding: 10px;
+  margin: 6px 0;
+  border-radius: 8px;
+  border: 1px solid #ddd;
+}
+
+/* TEXTAREA */
+textarea {
+  height: 60px;
+  resize: none;
+}
+
+/* BUTTON */
+.admission-container button {
+  width: 100%;
+  padding: 12px;
+  margin-top: 10px;
+
+  background: linear-gradient(135deg, #6c63ff, #4a47a3);
+  color: white;
+
+  border: none;
+  border-radius: 10px;
+
+  cursor: pointer;
+  font-weight: bold;
+
+  transition: 0.3s;
+}
+
+.admission-container button:hover {
+  transform: scale(1.03);
+}
+
+/* ID BOX */
+.idBox {
+  background: #eef0ff;
+  padding: 10px;
+  border-left: 4px solid #6c63ff;
+  border-radius: 8px;
+  margin-bottom: 10px;
+}
+
+/* ANIMATION */
+@keyframes fadeUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* SUCCESS SCREEN */
+.successBox {
+  text-align: center;
+  margin-top: 80px;
+}
+
+.successBox button {
+  padding: 10px 15px;
+  background: #6c63ff;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+}
+.popup-content {
+  width: 450px;
+  max-height: 90vh;   /* IMPORTANT */
+  overflow-y: auto;   /* SCROLL ENABLE */
+  background: white;
+  border-radius: 12px;
+  padding: 20px;
+  animation: pop 0.3s ease;
+}

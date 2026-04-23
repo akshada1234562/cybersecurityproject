@@ -1,0 +1,263 @@
+body {
+  margin: 0;
+  font-family: Arial;
+}
+
+/* HERO */
+.hero {
+  background: linear-gradient(to right, #000428, #004e92);
+  color: white;
+  text-align: center;
+  padding: 100px 20px;
+}
+
+.hero h1 {
+  font-size: 40px;
+}
+
+.buttons {
+  margin-top: 20px;
+}
+
+button {
+  margin: 10px;
+  padding: 10px 20px;
+  border: none;
+  background: orange;
+  color: white;
+  cursor: pointer;
+  border-radius: 5px;
+}
+
+/* SECTION */
+.section {
+  padding: 50px;
+  text-align: center;
+}
+
+.section ul {
+  list-style: none;
+  padding: 0;
+}
+
+.section li {
+  margin: 10px 0;
+}
+
+/* EXAM */
+.exam {
+  background: #f4f4f4;
+}
+.course-card {
+  background: white;
+  padding: 20px;
+  margin: 20px auto;
+  width: 80%;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0,0,0,0.1);
+  text-align: left;
+}
+.section h3 {
+  margin-top: 20px;
+  color: #004e92;
+}
+.exam {
+  background: #f4f4f4;
+}
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: #0f172a;
+  padding: 15px 30px;
+  color: white;
+}
+
+.logo {
+  font-size: 22px;
+  font-weight: bold;
+  color: #38bdf8;
+}
+
+.nav-links {
+  list-style: none;
+  display: flex;
+  gap: 20px;
+}
+
+.nav-links li a {
+  color: white;
+  text-decoration: none;
+  padding: 8px 14px;
+  border-radius: 6px;
+  transition: 0.3s;
+}
+
+.nav-links li a:hover {
+  background: #38bdf8;
+  color: black;
+}
+.dashboard-container {
+  display: flex;
+  height: 100vh;
+}
+
+/* SIDEBAR */
+.sidebar {
+  width: 250px;
+  background: #0f172a;
+  color: white;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.sidebar h2 {
+  margin-bottom: 20px;
+  color: #38bdf8;
+}
+
+.sidebar button {
+  padding: 10px;
+  background: transparent;
+  border: 1px solid #334155;
+  color: white;
+  cursor: pointer;
+  border-radius: 6px;
+  text-align: left;
+}
+
+.sidebar button:hover {
+  background: #38bdf8;
+  color: black;
+}
+
+/* CONTENT */
+.content {
+  flex: 1;
+  padding: 30px;
+  background: #f1f5f9;
+}
+.dashboard-container {
+  display: flex;
+  height: 100vh;
+}
+
+/* LOGIN WRAPPER (CENTER) */
+.auth-wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+/* CARD */
+.auth-card {
+  width: 320px;
+  padding: 20px;
+  box-shadow: 0 0 15px rgba(0,0,0,0.2);
+  border-radius: 10px;
+  text-align: center;
+  background: white;
+}
+
+.auth-card input {
+  width: 90%;
+  margin: 8px 0;
+  padding: 10px;
+}
+
+.auth-card button {
+  margin-top: 10px;
+  padding: 10px;
+  width: 100%;
+  background: #4a90e2;
+  color: white;
+  border: none;
+  cursor: pointer;
+}
+
+.auth-card button:hover {
+  background: #357ab8;
+}
+
+/* SIDEBAR */
+.sidebar {
+  width: 250px;
+  background: #0f172a;
+  color: white;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.content {
+  flex: 1;
+  padding: 30px;
+  background: #f1f5f9;
+}
+.dashboard-wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+/* Highlight selected card */
+.course-card {
+  padding: 20px;
+  margin: 15px;
+  background: white;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.course-card.active {
+  border: 2px solid #ff4b2b;
+  transform: scale(1.03);
+}
+
+/* Apply button */
+.course-card button {
+  margin-top: 10px;
+  padding: 8px 15px;
+  background: #ff4b2b;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  
+}
+
+/* Popup */
+.popup {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0,0,0,0.6);
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.popup-content {
+  background: white;
+  padding: 20px;
+  border-radius: 10px;
+  width: 400px;
+  animation: fadeIn 0.4s;
+}
+
+.close {
+  float: right;
+  cursor: pointer;
+}
+
+/* Animation */
+@keyframes fadeIn {
+  from { opacity: 0; transform: scale(0.8); }
+  to { opacity: 1; transform: scale(1); }
+}

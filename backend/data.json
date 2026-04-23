@@ -1,0 +1,481 @@
+[
+  {
+    "name": "Akshada maruti sawant",
+    "email": "sakshada37@gmail.com",
+    "phone": "07058436152"
+  },
+  {
+    "name": "aaa",
+    "email": "aa@gmail.com",
+    "phone": "1234567891"
+  },
+  {
+    "name": "bbb",
+    "email": "abc@gmail.com",
+    "phone": "9876543210"
+  },
+  null,
+  null,
+  null,
+  null,
+  {
+    "id": 1776410349873,
+    "fullName": "Akshada maruti sawant",
+    "email": "sakshada37@gmail.com",
+    "mobile": "07058436152"
+  },
+  {
+    "id": 1776410434867,
+    "fullName": "asd",
+    "email": "asd@gmail.com",
+    "mobile": "1234567891"
+  },
+  {
+    "id": 1776410536734,
+    "fullName": "asd",
+    "email": "asd@gmail.com",
+    "mobile": "1234567891"
+  },
+  {
+    "id": 1776411202818,
+    "fullName": "Akshada maruti sawant",
+    "email": "sakshada37@gmail.com",
+    "mobile": "07058436152"
+  },
+  {
+    "id": 1776411446287,
+    "fullName": "Akshada maruti sawant",
+    "email": "sakshada37@gmail.com",
+    "mobile": "07058436152"
+  },
+  {
+    "id": 1776411772444,
+    "fullName": "Akshada maruti sawant",
+    "email": "sakshada37@gmail.com",
+    "mobile": "07058436152"
+  },
+  {
+    "id": 1776411858006,
+    "fullName": "Akshada maruti sawant",
+    "email": "sakshada37@gmail.com",
+    "mobile": "07058436152"
+  },
+  {
+    "id": 1776411936699,
+    "fullName": "Akshada maruti sawant",
+    "email": "sakshada37@gmail.com",
+    "mobile": "07058436152"
+  },
+  {
+    "id": 1776414430957,
+    "fullName": "Akshada maruti sawant",
+    "email": "sakshada37@gmail.com",
+    "mobile": "07058436152"
+  },
+  {
+    "id": 1776415404856,
+    "fullName": "Akshada maruti sawant",
+    "email": "sakshada37@gmail.com",
+    "mobile": "07058436152"
+  },
+  {
+    "id": 1776425713932,
+    "fullName": "Akshada maruti sawant",
+    "email": "sakshada37@gmail.com",
+    "mobile": "07058436152"
+  },
+  {
+    "id": 1776442243934,
+    "fullName": "pratiksha",
+    "email": "pratikshatele517@gmail.com",
+    "mobile": "7798184436"
+  },
+  {
+    "id": 1776505148593,
+    "fullName": "pratiksha",
+    "email": "pratikshatele517@gmail.com",
+    "mobile": "7798184436"
+  },
+  {
+    "id": 1776509592961,
+    "fullName": "pratiksha",
+    "email": "pratikshatele517@gmail.com",
+    "mobile": "7798184436"
+  },
+  {
+    "id": 1776511102611,
+    "fullName": "pratiksha",
+    "email": "pratikshatele517@gmail.com",
+    "mobile": "7798184436"
+  },
+  {
+    "id": 1776514858368,
+    "fullName": "Akshada maruti sawant",
+    "email": "sakshada37@gmail.com",
+    "mobile": "07058436152"
+  },
+  {
+    "id": 1776517860930,
+    "fullName": "Akshada maruti sawant",
+    "email": "sakshada37@gmail.com",
+    "mobile": "07058436152"
+  },
+  {
+    "id": 1776521077985,
+    "fullName": "aaa",
+    "email": "sakshada37@gmail.com",
+    "mobile": "07058436152"
+  },
+  {
+    "id": 1776584517540,
+    "fullName": "",
+    "dob": "2026-04-19",
+    "gender": "Female",
+    "email": "sakshada37@gmail.com",
+    "mobile": "07058436152",
+    "address": "at post MALAWADI TAL man dist. Satara\r\nYashawant novelty bud road Malawadi tal man dist satara",
+    "education": "",
+    "course": "3-MONTH CERTIFICATE COURSE",
+    "batch": "Morning",
+    "paymentFile": "1776584517530-code.txt"
+  },
+  {
+    "id": 1776584554622,
+    "fullName": "",
+    "dob": "2026-04-19",
+    "gender": "Female",
+    "email": "sakshada37@gmail.com",
+    "mobile": "07058436152",
+    "address": "at post MALAWADI TAL man dist. Satara\r\nYashawant novelty bud road Malawadi tal man dist satara",
+    "education": "",
+    "course": "Not Selected",
+    "batch": "Morning",
+    "paymentFile": "1776584554619-code.txt"
+  },
+  {
+    "id": 1776585271886,
+    "fullName": "",
+    "dob": "2026-04-19",
+    "gender": "Female",
+    "email": "sakshada37@gmail.com",
+    "mobile": "07058436152",
+    "address": "at post malawadi tal man dist satara\r\nyashanwant noveltij bhudh road malawadi tal man dist satara",
+    "education": "",
+    "course": "3-MONTH CERTIFICATE COURSE",
+    "batch": "Morning",
+    "paymentFile": "1776585271882-code.txt"
+  },
+  {
+    "id": 1776585395955,
+    "fullName": "",
+    "dob": "2026-04-19",
+    "gender": "Female",
+    "email": "sakshada37@gmail.com",
+    "mobile": "07058436152",
+    "address": "at post malawadi tal man dist satara\r\nyashanwant noveltij bhudh road malawadi tal man dist satara",
+    "education": "",
+    "course": "3-MONTH CERTIFICATE COURSE",
+    "batch": "Evening",
+    "paymentFile": "1776585395950-code.txt"
+  },
+  {
+    "id": 1776585594162,
+    "fullName": "",
+    "dob": "2026-04-19",
+    "gender": "Female",
+    "email": "sakshada37@gmail.com",
+    "mobile": "07058436152",
+    "address": "at post malawadi tal man dist satara\r\nyashanwant noveltij bhudh road malawadi tal man dist satara",
+    "education": "",
+    "course": "6-MONTH CERTIFICATE COURSE",
+    "batch": "Evening",
+    "paymentFile": "1776585594158-code.txt"
+  },
+  {
+    "id": 1776586114836,
+    "fullName": "",
+    "dob": "2026-04-19",
+    "gender": "Female",
+    "email": "sakshada37@gmail.com",
+    "mobile": "07058436152",
+    "address": "at post malawadi tal man dist satara\r\nyashanwant noveltij bhudh road malawadi tal man dist satara",
+    "education": "",
+    "course": "3-MONTH CERTIFICATE COURSE",
+    "batch": "Evening",
+    "paymentFile": "1776586114833-code.txt"
+  },
+  {
+    "id": 1776586351636,
+    "fullName": "",
+    "dob": "2026-04-19",
+    "gender": "Female",
+    "email": "sakshada37@gmail.com",
+    "mobile": "07058436152",
+    "address": "at post malawadi tal man dist satara\r\nyashanwant noveltij bhudh road malawadi tal man dist satara",
+    "education": "",
+    "course": "3-MONTH CERTIFICATE COURSE",
+    "batch": "Evening",
+    "paymentFile": "1776586351631-code.txt"
+  },
+  {
+    "id": 1776597476477,
+    "fullName": "",
+    "dob": "2026-04-19",
+    "gender": "Female",
+    "email": "sakshada37@gmail.com",
+    "mobile": "07058436152",
+    "address": "at post MALAWADI TAL man dist. Satara\r\nYashawant novelty bud road Malawadi tal man dist satara",
+    "education": "",
+    "course": "Not Selected",
+    "batch": "Morning",
+    "paymentFile": "1776597476475-code.txt"
+  },
+  {
+    "id": 1776598484679,
+    "fullName": "",
+    "dob": "2026-04-19",
+    "gender": "Female",
+    "email": "sakshada37@gmail.com",
+    "mobile": "07058436152",
+    "address": "at post malawadi tal man dist satara\r\nyashanwant noveltij bhudh road malawadi tal man dist satara",
+    "education": "",
+    "course": "Not Selected",
+    "batch": "Morning",
+    "paymentFile": "1776598484673-code.txt"
+  },
+  {
+    "id": 1776598890044,
+    "fullName": "",
+    "dob": "2026-05-10",
+    "gender": "Female",
+    "email": "sakshada37@gmail.com",
+    "mobile": "07058436152",
+    "address": "at post MALAWADI TAL man dist. Satara\r\nYashawant novelty bud road Malawadi tal man dist satara",
+    "education": "",
+    "course": "3-MONTH CERTIFICATE COURSE",
+    "batch": "Morning",
+    "paymentFile": "1776598890037-code.txt"
+  },
+  {
+    "id": 1776599449920,
+    "fullName": "",
+    "dob": "2026-04-19",
+    "gender": "Female",
+    "email": "sakshada37@gmail.com",
+    "mobile": "07058436152",
+    "address": "at post malawadi tal man dist satara\r\nyashanwant noveltij bhudh road malawadi tal man dist satara",
+    "education": "",
+    "course": "Not Selected",
+    "batch": "Morning",
+    "paymentFile": "1776599449917-code.txt"
+  },
+  {
+    "id": 1776599660445,
+    "fullName": "",
+    "dob": "2026-04-19",
+    "gender": "Female",
+    "email": "sakshada37@gmail.com",
+    "mobile": "07058436152",
+    "address": "at post MALAWADI TAL man dist. Satara\r\nYashawant novelty bud road Malawadi tal man dist satara",
+    "education": "",
+    "course": "Not Selected",
+    "batch": "Evening",
+    "paymentFile": "1776599660443-code.txt"
+  },
+  {
+    "id": 1776599766114,
+    "fullName": "",
+    "dob": "2026-04-19",
+    "gender": "Female",
+    "email": "sakshada37@gmail.com",
+    "mobile": "07058436152",
+    "address": "at post malawadi tal man dist satara\r\nyashanwant noveltij bhudh road malawadi tal man dist satara",
+    "education": "",
+    "course": "Not Selected",
+    "batch": "Morning",
+    "paymentFile": "1776599766101-code.txt"
+  },
+  {
+    "id": 1776600102966,
+    "fullName": "",
+    "dob": "2026-04-19",
+    "gender": "Female",
+    "email": "sakshada37@gmail.com",
+    "mobile": "07058436152",
+    "address": "at post MALAWADI TAL man dist. Satara\r\nYashawant novelty bud road Malawadi tal man dist satara",
+    "education": "",
+    "course": "Not Selected",
+    "batch": "Morning",
+    "paymentFile": "1776600102962-code.txt"
+  },
+  {
+    "id": 1776600553546,
+    "fullName": "",
+    "dob": "2026-04-19",
+    "gender": "Female",
+    "email": "sakshada37@gmail.com",
+    "mobile": "07058436152",
+    "address": "at post malawadi tal man dist satara\r\nyashanwant noveltij bhudh road malawadi tal man dist satara",
+    "education": "",
+    "course": "Not Selected",
+    "batch": "Morning",
+    "paymentFile": "1776600553542-code.txt"
+  },
+  {
+    "id": 1776600921920,
+    "fullName": "",
+    "dob": "2026-04-19",
+    "gender": "Female",
+    "email": "sakshada37@gmail.com",
+    "mobile": "07058436152",
+    "address": "at post malawadi tal man dist satara\r\nyashanwant noveltij bhudh road malawadi tal man dist satara",
+    "education": "",
+    "course": "3-MONTH CERTIFICATE COURSE",
+    "batch": "Morning",
+    "paymentFile": "1776600921915-code.txt"
+  },
+  {
+    "id": 1776601234395,
+    "fullName": "",
+    "dob": "2026-04-19",
+    "gender": "Male",
+    "email": "sakshada37@gmail.com",
+    "mobile": "07058436152",
+    "address": "at post MALAWADI TAL man dist. Satara\r\nYashawant novelty bud road Malawadi tal man dist satara",
+    "education": "",
+    "course": "3-MONTH CERTIFICATE COURSE",
+    "batch": "Morning",
+    "paymentFile": "1776601234391-code.txt"
+  },
+  {
+    "id": 1776601473108,
+    "fullName": "",
+    "dob": "2026-04-19",
+    "gender": "Male",
+    "email": "sakshada37@gmail.com",
+    "mobile": "07058436152",
+    "address": "at post malawadi tal man dist satara\r\nyashanwant noveltij bhudh road malawadi tal man dist satara",
+    "education": "",
+    "course": "3-MONTH CERTIFICATE COURSE",
+    "batch": "Morning",
+    "paymentFile": "1776601473102-code.txt"
+  },
+  {
+    "id": 1776601795807,
+    "fullName": "",
+    "dob": "2026-04-19",
+    "gender": "Male",
+    "email": "sakshada37@gmail.com",
+    "mobile": "07058436152",
+    "address": "at post MALAWADI TAL man dist. Satara\r\nYashawant novelty bud road Malawadi tal man dist satara",
+    "education": "",
+    "course": "3-MONTH CERTIFICATE COURSE",
+    "batch": "Morning",
+    "paymentFile": "1776601795801-code.txt"
+  },
+  {
+    "id": 1776601969906,
+    "student_id": "STU1776601969906",
+    "course_id": "COURSE1776601969906",
+    "course": "Not Selected",
+    "name": "Akshada maruti sawant",
+    "dob": "2026-04-19",
+    "gender": "Female",
+    "email": "sakshada37@gmail.com",
+    "mobile": "07058436152",
+    "address": "at post MALAWADI TAL man dist. Satara\r\nYashawant novelty bud road Malawadi tal man dist satara",
+    "qualification": "bsc",
+    "batch": "Morning",
+    "paymentFile": "1776601969892-code.txt"
+  },
+  {
+    "id": 1776602522270,
+    "student_id": "STU1776602522270",
+    "course_id": "COURSE1776602522270",
+    "course": "3-MONTH CERTIFICATE COURSE",
+    "name": "Akshada maruti sawant",
+    "dob": "2026-04-19",
+    "gender": "Female",
+    "email": "sakshada37@gmail.com",
+    "mobile": "07058436152",
+    "address": "at post MALAWADI TAL man dist. Satara\r\nYashawant novelty bud road Malawadi tal man dist satara",
+    "qualification": "bsc",
+    "batch": "Morning",
+    "paymentFile": "1776602522261-code.txt"
+  },
+  {
+    "id": 1776602615852,
+    "student_id": "STU1776602615852",
+    "course_id": "COURSE1776602615852",
+    "course": "3-MONTH CERTIFICATE COURSE",
+    "name": "Akshada maruti sawant",
+    "dob": "2026-04-19",
+    "gender": "Other",
+    "email": "sakshada37@gmail.com",
+    "mobile": "07058436152",
+    "address": "at post malawadi tal man dist satara\r\nyashanwant noveltij bhudh road malawadi tal man dist satara",
+    "qualification": "bsc",
+    "batch": "Evening",
+    "paymentFile": "1776602615842-code.txt"
+  },
+  {
+    "id": 1776603019279,
+    "student_id": "STU1776603019279",
+    "course_id": "COURSE1776603019279",
+    "course": "Not Selected",
+    "name": "Akshada maruti sawant",
+    "dob": "2026-04-19",
+    "gender": "Female",
+    "email": "sakshada37@gmail.com",
+    "mobile": "07058436152",
+    "address": "at post malawadi tal man dist satara\r\nyashanwant noveltij bhudh road malawadi tal man dist satara",
+    "qualification": "bsc",
+    "batch": "Morning",
+    "paymentFile": "1776603019252-code.txt"
+  },
+  {
+    "id": 1776603954391,
+    "student_id": "STU1776603954391",
+    "course_id": "COURSE1776603954391",
+    "course": "Not Selected",
+    "name": "Akshada maruti sawant",
+    "dob": "2026-04-19",
+    "gender": "Female",
+    "email": "sakshada37@gmail.com",
+    "mobile": "07058436152",
+    "address": "at post malawadi tal man dist satara\r\nyashanwant noveltij bhudh road malawadi tal man dist satara",
+    "qualification": "bsc",
+    "batch": "Morning",
+    "paymentFile": "1776603954357-code.txt"
+  },
+  {
+    "id": 1776604481884,
+    "student_id": "STU1776604481884",
+    "course_id": "COURSE1776604481884",
+    "course": "3-MONTH CERTIFICATE COURSE",
+    "name": "Akshada maruti sawant",
+    "dob": "2026-04-19",
+    "gender": "Male",
+    "email": "sakshada37@gmail.com",
+    "mobile": "07058436152",
+    "address": "at post MALAWADI TAL man dist. Satara\r\nYashawant novelty bud road Malawadi tal man dist satara",
+    "qualification": "ba",
+    "batch": "Morning",
+    "paymentFile": "1776604481874-code.txt"
+  },
+  {
+    "id": 1776751373516,
+    "student_id": "STU1776751373516",
+    "course_id": "COURSE1776751373516",
+    "course": "6-MONTH CERTIFICATE COURSE",
+    "name": "Akshada maruti sawant",
+    "dob": "2026-04-21",
+    "gender": "Female",
+    "email": "sakshada37@gmail.com",
+    "mobile": "07058436152",
+    "address": "at post malawadi tal man dist satara\r\nyashanwant noveltij bhudh road malawadi tal man dist satara",
+    "qualification": "bsc",
+    "batch": "Morning",
+    "paymentFile": "1776751373499-code.txt"
+  }
+]
