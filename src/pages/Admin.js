@@ -496,9 +496,11 @@ g
 
     <textarea
       placeholder="Enter message"
+      style={{ width: "600px", height: "200px" }}
       value={message}
       onChange={(e) => setMessage(e.target.value)}
     />
+    
 
     <br /><br />
 
