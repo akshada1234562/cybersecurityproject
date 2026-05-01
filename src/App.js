@@ -1,11 +1,11 @@
 import React, { useState } from "react";
 import { BrowserRouter as Router, Routes, Route, Link } from "react-router-dom";
-
 import Home from "./pages/Home";
 import Courses from "./pages/Courses";
 import Admission from "./pages/Admission";
 import Dashboard from "./pages/Dashboard";
 import Admin from "./pages/Admin";
+import ResetPassword from "./pages/ResetPassword";
 
 import "./App.css";
 
@@ -21,8 +21,6 @@ function App() {
 
         <ul className="nav-links">
           <li><Link to="/">Home</Link></li>
-          <li><Link to="/courses">Courses</Link></li>
-          <li><Link to="/admission">Admission</Link></li>
           <li><Link to="/dashboard">Dashboard</Link></li>
           <li><Link to="/admin">Admin</Link></li>
         </ul>
@@ -35,6 +33,7 @@ function App() {
         <Route path="/courses" element={<Courses />} />
         <Route path="/dashboard" element={<Dashboard />} />
         <Route path="/admin" element={<Admin />} />
+        <Route path="/reset/:token" element={<ResetPassword />} />
 
         {/* ADMISSION */}
         <Route

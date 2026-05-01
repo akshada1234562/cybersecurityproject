@@ -1,0 +1,17 @@
+.sidebar {
+  width: 220px;
+  height: 100vh;
+  position: fixed;
+  top: 0;
+  left: 0;
+  background-color: #0f172a;
+  color: white;
+}
+
+.content {
+  margin-left: 220px;  /* sidebar width इतकं */
+  padding: 20px;
+  height: 100vh;
+  overflow-x: auto;
+  background: #f5f7fb;
+}

@@ -8,125 +8,167 @@ function Courses() {
   const [selectedCourse, setSelectedCourse] = useState("");
   const [showForm, setShowForm] = useState(false);
 
-  // 👉 Apply button click function
-  const handleApplyClick = (e, courseName) => {
-    e.stopPropagation(); // card click थांबवण्यासाठी
+  const handleApplyClick = (e, courseName, description) => {
+    e.stopPropagation();
 
-    localStorage.setItem("selectedCourse", courseName); // Store selected course in localStorage
+    const courseData = {
+      name: courseName,
+      description: description,
+    };
+
+    localStorage.setItem("selectedCourse", JSON.stringify(courseData));
+
     setSelectedCourse(courseName);
     setShowForm(true);
   };
 
   return (
-    <div className="section">
+    <div className="container py-4">
 
-      <h1>📚 Our Courses</h1>
+      <h1 className="text-center mb-4">📚 Our Courses</h1>
 
-      {/* 3 Month Course */}
-      <div 
-        className={`course-card ${selectedCourse === "3-MONTH CERTIFICATE COURSE" ? "active" : ""}`}
-        onClick={() => setSelectedCourse("3-MONTH CERTIFICATE COURSE")}
-      >
-        <h2>🎓 3-Month Certificate Course</h2>
-        <p><b>Duration:</b> 3 Months</p>
+      {/* FLEX + BOOTSTRAP ROW */}
+      <div className="row justify-content-center g-4 courses-container">
 
-        <h4>Modules:</h4>
-        <ul>
-          <li>Basics of Cybersecurity</li>
-          <li>Computer Hardware & Networking</li>
-          <li>Operating Systems Fundamentals</li>
-          <li>Introduction to Ethical Hacking</li>
-          <li>Cyber Threats & Attacks</li>
-          <li>Digital Safety Practices</li>
-        </ul>
+        {/* 3 Month Course */}
+        <div
+          className={`col-md-4 course-card card shadow-lg p-3 ${
+            selectedCourse === "3-MONTH CERTIFICATE COURSE" ? "active" : ""
+          }`}
+          onClick={() => setSelectedCourse("3-MONTH CERTIFICATE COURSE")}
+        >
+          <h4>🎓 3-Month Certificate Course</h4>
+          <p><b>Duration:</b> 3 Months</p>
 
-        <h4>Outcome:</h4>
-        <p>Foundation-level cybersecurity knowledge</p>
+          <h6>Modules:</h6>
+          <ul>
+            <li>Basics of Cybersecurity</li>
+            <li>Computer Hardware & Networking</li>
+            <li>Operating Systems Fundamentals</li>
+            <li>Ethical Hacking Intro</li>
+            <li>Cyber Threats</li>
+            <li>Digital Safety</li>
+          </ul>
 
-        {selectedCourse === "3-MONTH CERTIFICATE COURSE" && (
-          <button onClick={(e) => handleApplyClick(e, "3-MONTH CERTIFICATE COURSE")}>
-            Apply Now
-          </button>
-        )}
+          <p><b>Outcome:</b> Foundation knowledge</p>
+
+          {selectedCourse === "3-MONTH CERTIFICATE COURSE" && (
+            <button
+              className="btn btn-dark"
+              onClick={(e) =>
+                handleApplyClick(
+                  e,
+                  "3-MONTH CERTIFICATE COURSE",
+                  "Basics of Cybersecurity + Networking"
+                )
+              }
+            >
+              Apply Now
+            </button>
+          )}
+        </div>
+
+        {/* 6 Month Course */}
+        <div
+          className={`col-md-4 course-card card shadow-lg p-3 ${
+            selectedCourse === "6-MONTH CERTIFICATE COURSE" ? "active" : ""
+          }`}
+          onClick={() => setSelectedCourse("6-MONTH CERTIFICATE COURSE")}
+        >
+          <h4>🎓 6-Month Certificate Course</h4>
+          <p><b>Duration:</b> 6 Months</p>
+
+          <h6>Modules:</h6>
+          <ul>
+            <li>Advanced Networking</li>
+            <li>Ethical Hacking</li>
+            <li>Web Security</li>
+            <li>Firewall Systems</li>
+            <li>Malware Basics</li>
+            <li>Digital Security</li>
+          </ul>
+
+          <p><b>Outcome:</b> Industry-ready skills</p>
+
+          {selectedCourse === "6-MONTH CERTIFICATE COURSE" && (
+            <button
+              className="btn btn-dark"
+              onClick={(e) =>
+                handleApplyClick(
+                  e,
+                  "6-MONTH CERTIFICATE COURSE",
+                  "Advanced Ethical Hacking + Web Security"
+                )
+              }
+            >
+              Apply Now
+            </button>
+          )}
+        </div>
+
+        {/* 1 Year Course */}
+        <div
+          className={`col-md-4 course-card card shadow-lg p-3 ${
+            selectedCourse === "1-YEAR PG DIPLOMA" ? "active" : ""
+          }`}
+          onClick={() => setSelectedCourse("1-YEAR PG DIPLOMA")}
+        >
+          <h4>🎓 1-Year PG Diploma</h4>
+          <p><b>Duration:</b> 12 Months</p>
+
+          <h6>Modules:</h6>
+          <ul>
+            <li>Advanced Ethical Hacking</li>
+            <li>Penetration Testing</li>
+            <li>Cyber Forensics</li>
+            <li>Cloud Security</li>
+            <li>AI in Cybersecurity</li>
+            <li>SOC Operations</li>
+          </ul>
+
+          <p><b>Outcome:</b> Professional expert</p>
+
+          {selectedCourse === "1-YEAR PG DIPLOMA" && (
+            <button
+              className="btn btn-dark"
+              onClick={(e) =>
+                handleApplyClick(
+                  e,
+                  "1-YEAR PG DIPLOMA",
+                  "Penetration Testing + Cloud + SOC"
+                )
+              }
+            >
+              Apply Now
+            </button>
+          )}
+        </div>
+
       </div>
 
-      {/* 6 Month Course */}
-      <div 
-        className={`course-card ${selectedCourse === "6-MONTH CERTIFICATE COURSE" ? "active" : ""}`}
-        onClick={() => setSelectedCourse("6-MONTH CERTIFICATE COURSE")}
-      >
-        <h2>🎓 6-Month Certificate Course</h2>
-        <p><b>Duration:</b> 6 Months</p>
-
-        <h4>Modules:</h4>
-        <ul>
-          <li>Advanced Networking</li>
-          <li>Ethical Hacking (Intermediate)</li>
-          <li>Web Application Security</li>
-          <li>System Security & Firewalls</li>
-          <li>Malware Analysis Basics</li>
-          <li>Digital & Physical Security Systems</li>
-        </ul>
-
-        <h4>Outcome:</h4>
-        <p>Industry-ready skills</p>
-
-        {selectedCourse === "6-MONTH CERTIFICATE COURSE" && (
-          <button onClick={(e) => handleApplyClick(e, "6-MONTH CERTIFICATE COURSE")}>
-            Apply Now
-          </button>
-        )}
-      </div>
-
-      {/* 1 Year Course */}
-      <div 
-        className={`course-card ${selectedCourse === "1-YEAR PG DIPLOMA" ? "active" : ""}`}
-        onClick={() => setSelectedCourse("1-YEAR PG DIPLOMA")}
-      >
-        <h2>🎓 1-Year PG Diploma</h2>
-        <p><b>Duration:</b> 12 Months</p>
-
-        <h4>Modules:</h4>
-        <ul>
-          <li>Advanced Ethical Hacking</li>
-          <li>Penetration Testing</li>
-          <li>Cyber Forensics</li>
-          <li>Cloud Security</li>
-          <li>AI in Cybersecurity</li>
-          <li>Enterprise Security Architecture</li>
-          <li>Security Operations (SOC)</li>
-        </ul>
-
-        <h4>Outcome:</h4>
-        <p>Professional cybersecurity expert</p>
-
-        {selectedCourse === "1-YEAR PG DIPLOMA" && (
-          <button onClick={(e) => handleApplyClick(e, "1-YEAR PG DIPLOMA")}>
-            Apply Now
-          </button>
-        )}
-      </div>
-
-      {/* Popup Form */}
+      {/* ✅ ANIMATED POPUP */}
       {showForm && (
-        <div className="popup">
-          <div className="popup-content">
+        <div className="popup-overlay" onClick={() => setShowForm(false)}>
+
+          <div className="popup-box" onClick={(e) => e.stopPropagation()}>
+
             <span className="close" onClick={() => setShowForm(false)}>✖</span>
 
-            {/* 👉 इथे function pass केलं */}
             <Admission
-  selectedCourse={selectedCourse}
-  onSubmitSuccess={() => {
-    setShowForm(false);
-    setSelectedCourse("");
-  }}
-/>
+              selectedCourse={selectedCourse}
+              userEmail={localStorage.getItem("email")}
+              onSubmitSuccess={() => {
+                setShowForm(false);
+                setSelectedCourse("");
+              }}
+            />
 
           </div>
+
         </div>
       )}
 
-    </div> 
+    </div>
   );
 }
 

@@ -1,4 +1,6 @@
 import React, { useState, useEffect } from "react";
+import axios from "axios";
+import "./Admin.css";
 
 export default function Admin() {
   const [active, setActive] = useState("students");
@@ -8,6 +10,15 @@ export default function Admin() {
   const [questions, setQuestions] = useState([]);
   const [editQ, setEditQ] = useState(null);
   const [payments, setPayments] = useState([])
+  const [title, setTitle] = useState("");
+const [link, setLink] = useState("");
+const [courses, setCourses] = useState([]);
+const [liveForm, setLiveForm] = useState({
+  title: "",
+  link: "",
+  course_id: "",
+  date_time: ""
+});
 const [newQ, setNewQ] = useState({
   question: "",
   option1: "",
@@ -16,6 +27,48 @@ const [newQ, setNewQ] = useState({
   option4: "",
   answer: ""
 });
+
+useEffect(() => {
+  axios.get("http://localhost:5000/courses")
+    .then(res => {
+      console.log("COURSES:", res.data);
+      setCourses(res.data);
+    })
+    .catch(err => console.log(err));
+}, []);
+
+const handleSubmit = async () => {
+  console.log("SUBMIT CLICKED");
+
+  console.log("TITLE:", title);
+  console.log("LINK:", link);
+
+  if (!title || !link) {
+    alert("Fill all fields ❌");
+    return;
+  }
+
+  const newClass = { title, link, course: "Java" };
+
+  try {
+    const res = await fetch("http://localhost:5000/add-live-class", {
+      method: "POST",
+      headers: { "Content-Type": "application/json" },
+      body: JSON.stringify(newClass),
+    });
+
+    const data = await res.json();
+
+    console.log("SERVER RESPONSE:", data);
+
+    alert(data.message);
+  } catch (err) {
+    console.log(err);
+    alert("API Error ❌");
+  }
+};
+      
+
   
 
   // -------------------- QUESTIONS --------------------
@@ -98,9 +151,11 @@ const [newQ, setNewQ] = useState({
 
 
 useEffect(() => {
-  fetch("http://localhost:5000/payments")
-    .then(res => res.json())
-    .then(data => setPayments(data))
+  axios.get("http://localhost:5000/api/payments")
+    .then(res => {
+      console.log("DATA:", res.data); // 👈 MUST
+      setPayments(res.data);
+    })
     .catch(err => console.log(err));
 }, []);
 
@@ -149,8 +204,12 @@ useEffect(() => {
   // 1. Backend ला call करून order घे
 
 
-  const payNow = async () => {
+ const payNow = async () => {
   try {
+    const user = JSON.parse(localStorage.getItem("user"));
+    const course = JSON.parse(localStorage.getItem("course"));
+
+    // 🔹 order create
     const res = await fetch("http://localhost:5000/create-order", {
       method: "POST"
     });
@@ -163,30 +222,44 @@ useEffect(() => {
       currency: "INR",
       order_id: order.id,
 
-      // ✅ handler MUST be inside options
       handler: async function (response) {
         alert("Payment Successful ✅");
 
-        console.log(response);
+        console.log("Payment Response:", response);
 
-        await fetch("http://localhost:5000/save-payment", {
+        // 🔥 AUTO DATA SAVE
+        const saveRes = await fetch("http://localhost:5000/api/payment-success", {
           method: "POST",
           headers: {
             "Content-Type": "application/json"
           },
           body: JSON.stringify({
-            studentId: 1,
-            courseId: 101,
-            course: "Java",
-            studentName: "Akshada",
-            email: "test@gmail.com",
-            mobile: "9999999999",
+            studentId: user?.id,
+            courseId: course?.id,
+            course: course?.name,
+            studentName: user?.name,
+            email: user?.email,
+            mobile: user?.mobile,
             amount: order.amount,
             payment_id: response.razorpay_payment_id,
             order_id: response.razorpay_order_id,
             status: "PAID"
           })
         });
+
+        const data = await saveRes.json();
+        console.log("DB Response:", data);
+
+        if (saveRes.ok) {
+          alert("Saved in DB ✅");
+
+          // 👉 exam enable flag
+          localStorage.setItem("paymentDone", "true");
+
+          window.location.href = "/dashboard";
+        } else {
+          alert("DB Save Failed ❌");
+        }
       }
     };
 
@@ -195,9 +268,9 @@ useEffect(() => {
 
   } catch (err) {
     console.log(err);
-    alert("Payment failed ❌");
   }
 };
+          
   
 
 //--------------- EMAIL --------------------
@@ -255,6 +328,9 @@ return (
         <button onClick={() => setActive("exam")}>📚 Exam</button>
         <button onClick={() => setActive("questions")}>📚 Question Bank</button>
         <button onClick={() => setActive("email")}>Email</button>
+        <button onClick={() => setActive("addClass")}>
+  ➕ Add Live Class
+</button>
         
       </div>
 
@@ -347,6 +423,57 @@ g
           </div>
         )}
 
+    {active === "addClass" && (
+  <div>
+    <h2>🎥 Add Live Class</h2>
+
+    <input
+      placeholder="Title"
+      onChange={(e) =>
+        setLiveForm({ ...liveForm, title: e.target.value })
+      }
+    />
+
+    <input
+      placeholder="Link"
+      onChange={(e) =>
+        setLiveForm({ ...liveForm, link: e.target.value })
+      }
+    />
+
+   <select
+  onChange={(e) =>
+    setLiveForm({ ...liveForm, course_id: e.target.value })
+  }
+>
+  <option value="">Select Course</option>
+
+  <option value="1">3 Month Certificate Course</option>
+  <option value="2">6 Month Certificate Course</option>
+  <option value="3">1 Year PG Diploma</option>
+
+</select>
+
+    <input
+      type="datetime-local"
+      onChange={(e) =>
+        setLiveForm({ ...liveForm, date_time: e.target.value })
+      }
+    />
+
+    <button
+      onClick={() => {
+        axios
+          .post("http://localhost:5000/add-live-class", liveForm)
+          .then(() => alert("Live class added"));
+      }}
+    >
+      Add Live Class
+    </button>
+  </div>
+)}
+  
+
         {/* QUESTION BANK */}
         {active === "questions" && (
           <div>
@@ -413,70 +540,41 @@ g
 
         {active === "payments" && (
   <div>
-    <h2>Student Payments</h2>
+    <h2>Student Payments</h2> 
+    <div style={{ padding: "20px" }}>
+      <h2>💳 Payments Admin Panel</h2>
 
-    <button
-      onClick={() => {
-        alert("Clicked ✅");
-        payNow();
-      }}
-      style={{
-        padding: "10px",
-        background: "green",
-        color: "white",
-        border: "none",
-        cursor: "pointer",
-        marginBottom: "20px"
-      }}
-    >
-      💳 Pay Now
-    </button>
-
-    <table border="1" cellPadding="10">
-      <thead>
-        <tr>
-          <th>Student ID</th>
-          <th>Course ID</th>
-          <th>Course</th>
-          <th>Student Name</th>
-          <th>Email</th>
-          <th>Mobile</th>
-          <th>Amount</th>
-          <th>Status</th>
-          <th>Date</th>
-        </tr>
-      </thead>
-
-      <tbody>
-        {payments.length > 0 ? (
-          payments.map((p, index) => (
-            <tr key={index}>
-              <td>{p.studentId}</td>
-              <td>{p.courseId}</td>
-              <td>{p.course}</td>
-              <td>{p.studentName}</td>
-              <td>{p.email}</td>
-              <td>{p.mobile}</td>
-              <td>{p.amount}</td>
-              <td>
-                <span style={{ color: p.status === "PAID" ? "green" : "red" }}>
-                  {p.status}
-                </span>
-              </td>
-              <td>{p.date}</td>
-            </tr>
-          ))
-        ) : (
+      <table border="1" cellPadding="10" style={{ width: "100%", marginTop: "20px" }}>
+        <thead>
           <tr>
-            <td colSpan="9">No payments found</td>
+            <th>ID</th>
+            <th>Payment ID</th>
+            <th>Status</th>
+            <th>Amount</th>
+            <th>User ID</th>
+            <th>Date</th>
           </tr>
-        )}
-      </tbody>
-    </table>
+        </thead>
+
+        <tbody>
+  {payments.map((p, index) => (
+    <tr key={p.id}>
+      <td>{index + 1}</td>
+      <td>{p.payment_id}</td>
+      <td>{p.status}</td>
+      <td>{p.amount}</td>
+      <td>{p.user_id}</td>
+      <td>{p.created_at}</td>
+    </tr>
+  ))}
+</tbody>
+      </table>
+    </div>
+  
+           
   </div>
 )}
 
-        
 
         {/* EMAIL */}
         {active === "email" && (
@@ -500,8 +598,7 @@ g
       value={message}
       onChange={(e) => setMessage(e.target.value)}
     />
-    
-
+  
     <br /><br />
 
     <button
@@ -524,5 +621,8 @@ g
       </div>
       
     </div>
+    
   )
+  
 }
+

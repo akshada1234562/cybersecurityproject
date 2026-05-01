@@ -29,21 +29,85 @@ button {
   border-radius: 5px;
 }
 
-/* SECTION */
-.section {
-  padding: 50px;
+
+.d-flex {
+  overflow-x: auto;
+  scroll-behavior: smooth;
+}
+
+.card {
+  border-radius: 10px;
+}
+
+.custom-card {
+  transition: 0.3s ease;
+}
+
+.custom-card:hover {
+  transform: scale(1.05);
+}
+
+.active-card {
+  transform: scale(1.1);
+  border: 2px solid #0d6efd;
+  box-shadow: 0 0 20px rgba(13,110,253,0.6);
+}
+
+.flip-card {
+  width: 250px;
+  height: 180px;
+  perspective: 1000px;
+  cursor: pointer;
+  flex-shrink: 0;
+}
+
+.flip-inner {
+  width: 100%;
+  height: 100%;
+  transition: transform 0.6s;
+  transform-style: preserve-3d;
+  position: relative;
+}
+
+/* CLICK FLIP */
+.flip-card.active .flip-inner {
+  transform: rotateY(180deg);
+}
+
+/* FRONT */
+.flip-front, .flip-back {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  border-radius: 12px;
+  backface-visibility: hidden;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  color: white;
+  padding: 15px;
+}
+
+/* BACK */
+.flip-back {
+  background: #222;
+  transform: rotateY(180deg);
   text-align: center;
 }
 
-.section ul {
-  list-style: none;
-  padding: 0;
+/* HOVER EFFECT */
+.flip-card:hover {
+  transform: scale(1.05);
+  transition: 0.3s;
 }
 
-.section li {
-  margin: 10px 0;
+/* CLICK ANIMATION */
+.active-card {
+  transform: scale(1.1);
+  box-shadow: 0 0 25px rgba(0, 123, 255, 0.6);
+  border: 2px solid #0d6efd;
 }
-
 /* EXAM */
 .exam {
   background: #f4f4f4;
@@ -229,6 +293,11 @@ button {
   
 }
 
+.container {
+  background-size: cover;
+
+}
+
 /* Popup */
 .popup {
   position: fixed;
@@ -260,4 +329,110 @@ button {
 @keyframes fadeIn {
   from { opacity: 0; transform: scale(0.8); }
   to { opacity: 1; transform: scale(1); }
+}
+
+.flip-card {
+  width: 300px;
+  height: 200px;
+  perspective: 1000px;
+  flex-shrink: 0;
+  cursor: pointer;
+}
+
+/* INNER FLIP */
+.flip-inner {
+  width: 100%;
+  height: 100%;
+  position: relative;
+  transition: transform 0.8s;
+  transform-style: preserve-3d;
+}
+
+/* CLICK FLIP */
+.active-card .flip-inner {
+  transform: rotateY(180deg);
+}
+
+/* FRONT + BACK COMMON */
+.flip-front,
+.flip-back {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  border-radius: 15px;
+  backface-visibility: hidden;
+  padding: 15px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  color: white;
+  box-shadow: 0 5px 15px rgba(0,0,0,0.3);
+}
+
+/* FRONT */
+.flip-front {
+  background: linear-gradient(135deg, #4a90e2, #6a11cb);
+}
+
+/* BACK */
+.flip-back {
+  background: linear-gradient(135deg, #11998e, #38ef7d);
+  transform: rotateY(180deg);
+}
+
+/* HOVER EFFECT */
+.flip-card:hover {
+  transform: scale(1.05);
+  transition: 0.3s;
+}
+
+.footer {
+  background-color: #0f172a;
+  color: #fff;
+  padding: 40px 20px 10px;
+  font-family: Arial, sans-serif;
+}
+
+.footer-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 20px;
+  margin-bottom: 20px;
+}
+
+.footer-section h3 {
+  margin-bottom: 10px;
+  color: #38bdf8;
+}
+
+.footer-section p {
+  font-size: 14px;
+  line-height: 1.6;
+}
+
+.footer-section ul {
+  list-style: none;
+  padding: 0;
+}
+
+.footer-section ul li {
+  margin: 8px 0;
+}
+
+.footer-section ul li a {
+  text-decoration: none;
+  color: #ccc;
+  transition: 0.3s;
+}
+
+.footer-section ul li a:hover {
+  color: #38bdf8;
+}
+
+.footer-bottom {
+  text-align: center;
+  border-top: 1px solid #334155;
+  padding-top: 10px;
+  font-size: 14px;
 }

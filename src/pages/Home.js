@@ -1,18 +1,48 @@
 import React, { useState } from "react";
 import "../App.css";
 import Admission from "./Admission";
+import { Link } from "react-router-dom";
+
+<Link to="/courses">Courses</Link>
+
+
 
 function Home() {
   const [showForm, setShowForm] = useState(false);
-  
+  const [activeCard, setActiveCard] = useState(null);
+
+  const cards = [
+    {
+      id: 1,
+      title: "About Us",
+      desc: "Cybeorch Institute focuses on Cybersecurity, Ethical Hacking, Cyber Defense.",
+    },
+    {
+      id: 2,
+      title: "Batch Timings",
+      desc: "Weekdays (Alternate Days) - 6 Hours Weekly | Weekends Available",
+    },
+    {
+      id: 3,
+      title: "Programs Offered",
+      desc: "3-Month Certificate, 6-Month Certificate, 1-Year Diploma",
+    },
+    {
+      id: 4,
+      title: "Key Highlights",
+      desc: "Live Classes, Real Projects, Certification Support, Placement Help",
+    },
+    {
+      id: 5,
+      title: "Entrance Exam",
+      desc: "14 May 2026 - Certificate | 15 May 2026 - Diploma (Online Mode)",
+    },
+  ];
 
   return (
     <div>
 
-      {/* ✅ ONLY FIXED BUTTON */}
-
-
-      {/* HERO */}
+      {/* HERO SECTION */}
       <div className="hero">
         <h1>🔐 Build Your Career in Cybersecurity</h1>
         <p>
@@ -20,94 +50,96 @@ function Home() {
         </p>
 
         <div className="buttons">
-          <button onClick={() => setShowForm(true)}>
-          Apply Now
-          </button>
-
+          
           <button>Book Entrance Test</button>
           <button>Download Brochure</button>
         </div>
-<div style={{
-  textAlign: "center",
-  marginTop: "40px",
-  background: "#0a0925",
-  padding: "20px",
-  borderRadius: "10px",
-  boxShadow: "0 0 10px rgba(0,0,0,0.1)"
-}}>
-  <h2>📂 Projects & Assignments</h2>
 
-  <ul style={{
-    display: "inline-block",
-    textAlign: "left",
-    marginTop: "15px"
-  }}>
-    <li>✔ Weekly assignments for practice</li>
-    <li>✔ Real-world cybersecurity projects</li>
-    <li>✔ Final project submission mandatory</li>
-    <li>✔ Certification only after project completion</li>
-  </ul>
-</div>
-        
         {showForm && <Admission />}
       </div>
 
-      {/* ABOUT */}
-      <div className="section">
-        <h2>About Us</h2>
-        <p>
-          Cybeorch Institute of Cybersecurity is a next-generation learning platform focused on Digital & Physical Security Systems, Ethical Hacking, and Cyber Defense.
-        </p>
+      {/* HORIZONTAL CARDS SECTION */}
+      <div className="container py-4">
+        <h2 className="text-center mb-4">📚 Institute Information</h2>
 
-        <ul>
-          <li>Industry-relevant curriculum</li>
-          <li>Live online classes</li>
-          <li>Practical training & assignments</li>
-          <li>Flexible batch timings</li>
-        </ul>
+        <div className="d-flex overflow-auto gap-3 pb-3">
+
+          {cards.map((card) => (
+            <div
+              key={card.id}
+              onClick={() =>
+                setActiveCard(activeCard === card.id ? null : card.id)
+              }
+              className={`flip-card ${
+                activeCard === card.id ? "active-card" : ""
+              }`}
+            >
+
+              <div className="flip-inner">
+
+                {/* FRONT SIDE */}
+                <div className="flip-front">
+                  <h4>{card.title}</h4>
+                  <p>Click to view</p>
+                </div>
+
+                {/* BACK SIDE */}
+                <div className="flip-back">
+                  <h4>{card.title}</h4>
+                  <p>{card.desc}</p>
+                </div>
+
+              </div>
+
+            </div>
+          ))}
+
+        </div>
+      </div>
+ <footer className="footer">
+      <div className="footer-container">
+
+        <div className="footer-section">
+          <h3>About Us</h3>
+          <p>
+            We provide quality education and skill-based learning to help students
+            build a successful career.
+          </p>
+        </div>
+
+        <div className="footer-section">
+          <h3>Quick Links</h3>
+          <ul>
+  <li><Link to="/courses">Courses</Link></li>
+  <li><Link to="/admission">Admission</Link></li>
+  <li><Link to="/contact">Contact</Link></li>
+</ul>
+        </div>
+
+        <div className="footer-section">
+          <h3>Legal</h3>
+          <ul>
+            <li><a href="#">Privacy Policy</a></li>
+            <li><a href="#">Terms & Conditions</a></li>
+          </ul>
+        </div>
+
+        <div className="footer-section">
+          <h3>Contact</h3>
+          <p>Email: info@example.com</p>
+          <p>Phone: +91 9876543210</p>
+          <p>Pune, India</p>
+        </div>
+
       </div>
 
-      {/* BATCH TIMINGS */}
-      <div className="section">
-        <h2>⏰ Batch Timings</h2>
-
-        <h3>📅 Weekdays (Alternate Days)</h3>
-        <p>Total: 6 Hours Weekly</p>
-
-        <h3>📅 Weekend Batches</h3>
-        <p>Saturday & Sunday</p>
+      <div className="footer-bottom">
+        <p>© 2026 Your Company. All rights reserved.</p>
       </div>
-
-      {/* PROGRAMS */}
-      <div className="section">
-        <h2>Programs Offered</h2>
-        <ul>
-          <li>3-Month Certificate Course</li>
-          <li>6-Month Certificate Course</li>
-          <li>1-Year Diploma in Cybersecurity</li>
-        </ul>
-      </div>
-
-      {/* HIGHLIGHTS */}
-      <div className="section">
-        <h2>Key Highlights</h2>
-        <ul>
-          <li>100% Online Learning</li>
-          <li>Weekly Classes</li>
-          <li>Real Projects</li>
-          <li>Certification Support</li>
-        </ul>
-      </div>
-
-      {/* EXAM */}
-      <div className="section exam">
-        <h2>Entrance Exam</h2>
-        <p>14 May 2026 – Certificate Course</p>
-        <p>15 May 2026 – PG Diploma</p>
-        <p>Mode: Online</p>
-      </div>
-
+    </footer>
+  
     </div>
+    
   );
 }
 
